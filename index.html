@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Поиск реагентов</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Реагенты</h1>
+    </header>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+
+    <form>
+      <label for="GET-reagent">Искомое вещество:</label>
+      <input list="reagents" id="GET-reagent" name="reagents" />
+        <datalist id="reagents">
+        </datalist>
+      </input>
+    </form>
+
+    <div id="result">
+      <h1 class="room">2218</h1>
+      <div class="shelf">
+        <h2 class="shelf-name">23A</h2>
+        <p class="shelf-description">Слева от стола Елены Геннадьевны</p>
+      </div>
+      <div class="reagent-data">
+        <div class="quaility">чда</div>
+        <div class="amount">0.05 кг</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>
