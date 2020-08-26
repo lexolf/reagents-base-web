@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Поиск реагентов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css">
   </head>
@@ -16,15 +17,15 @@
 
     <pre id="content" style="white-space: pre-wrap;"></pre>
 
-    <form>
-      <label for="GET-reagent">Искомое вещество:</label>
-      <input list="reagents" id="GET-reagent" name="reagents" />
+    <div id="form">
+      <label for="GET-reagent">Что ищем?</label>
+      <input list="reagents" id="GET-reagent" name="reagents" placeholder="Философский камень">
         <datalist id="reagents">
         </datalist>
       </input>
-    </form>
+    </div>
 
-    <div id="result">
+    <div class="card">
       <h1 class="room">2218</h1>
       <div class="shelf">
         <h2 class="shelf-name">23A</h2>
