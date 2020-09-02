@@ -94,12 +94,10 @@ function makeReagentList(reagent, quality, room, shelf, amount, units) {
 function renderInfo(){
   var reagent = document.getElementById("GET-reagent").value;
   var cards = document.getElementsByClassName("card");
-  console.log(cards);
   while(cards[0]){
     cards[0].parentNode.removeChild(cards[0])};
   reagentsCatalogue.forEach(item => {
     if(item[0]==reagent){
-      console.log(reagent);
       var card = document.createElement("div");
       card.classList += "card";
       var room = document.createElement("h1");
@@ -131,20 +129,6 @@ function renderInfo(){
     }
   });
 }
-
-{/* <div class="card">
-<h1 class="room">2218</h1>
-<div class="shelf">
-  <h2 class="shelf-name">23A</h2>
-  <p class="shelf-description">Слева от стола Елены Геннадьевны</p>
-</div>
-<div class="reagent-data">
-  <div class="quality">чда</div>
-  <div class="amount">0.05 кг</div>
-</div>
-</div> */}
-
-
 
 /**
  * Print the names and majors of students in a sample spreadsheet:
