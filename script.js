@@ -93,7 +93,8 @@ function makeReagentList(reagent, quality, room, shelf, amount, units) {
 
 function renderInfo(){
   var reagent = document.getElementById("GET-reagent").value;
-  var cards = document.getElementsByTagName('card');
+  var cards = document.getElementsByClassName("card");
+  console.log(cards);
   while(cards[0]){
     cards[0].parentNode.removeChild(cards[0])};
   reagentsCatalogue.forEach(item => {
